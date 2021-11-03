@@ -8,7 +8,12 @@ const Landing: FC = () => {
     <div>
       <Row justify='space-around' gutter={[16, 48]}>
         {SingleCards.map((card) => (
-          <SingleCard image={card.image} title={card.title} />
+          <SingleCard
+            image={card.image}
+            title={card.title}
+            key={card.title}
+            path={card.path}
+          />
         ))}
       </Row>
     </div>

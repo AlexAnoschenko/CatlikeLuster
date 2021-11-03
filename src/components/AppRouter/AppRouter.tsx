@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Switch, Route, Redirect } from 'react-router';
-import { RouteName, routes } from '../../router';
+import { RouteName } from '../../constants';
+import { routes } from '../../router';
 
 const AppRouter: FC = () => {
   return (
