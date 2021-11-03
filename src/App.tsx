@@ -12,7 +12,7 @@ const App: FC = () => {
       <Layout.Content
         style={{
           padding: '50px 50px',
-          height: 'calc(100vh - 270px)',
+          minHeight: 'calc(100vh - 300px)',
         }}
       >
         <AppRouter />
