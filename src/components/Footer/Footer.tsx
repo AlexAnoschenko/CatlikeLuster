@@ -1,11 +1,11 @@
-import { Layout } from 'antd';
-import { FC } from 'react';
+import { Layout } from "antd";
+import { FC } from "react";
 
 const Footer: FC = () => {
   return (
-    <Layout.Footer style={{ background: 'gray', height: 100 }}>
-      Footer
-    </Layout.Footer>
+    <Layout.Footer
+      style={{ background: "#e7e7e7", height: 100 }}
+    ></Layout.Footer>
   );
 };
 
