@@ -1,14 +1,20 @@
 import { Col, Layout, Row } from 'antd';
-import { FC } from 'react';
+import { FC, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import setLanguage from '../Dictionary/index';
 import { useActions } from '../../hooks/useActions';
 
-const Navbar: FC = () => {
+const Navbar: FC = (props) => {
+    const router = useHistory();
+    const { pathname } = router.location;
+    const [selectedPage, setSelectedPage] = useState(pathname);
     const { language } = useTypedSelector((state) => state.language);
     const dict = setLanguage(language);
     const { setLang } = useActions();
+
+    console.log(pathname);
 
     const selectLanguage = (lang: string) => {
         setLang(lang);
@@ -32,23 +38,87 @@ const Navbar: FC = () => {
                         gutter={30}
                         className='text-lg cursor-pointer select-none nunito'
                     >
-                        <Col className='text-menu-button active:text-menu-active'>
-                            {dict.main}
+                        <Col className='text-menu-button'>
+                            <Link
+                                className={`${
+                                    selectedPage === '/' &&
+                                    'border-b-2 border-black'
+                                }`}
+                                to='/main'
+                                onClick={() => setSelectedPage('/')}
+                            >
+                                {dict.main}
+                            </Link>
                         </Col>
-                        <Col className='hover:text-menu-button active:text-menu-active'>
-                            {dict.parents}
+                        <Col>
+                            <Link
+                                className={`${
+                                    selectedPage === '/parents' &&
+                                    'border-b-2 border-black'
+                                }`}
+                                to='/parents'
+                                onClick={() =>
+                                    setSelectedPage('/parents')
+                                }
+                            >
+                                {dict.parents}
+                            </Link>
                         </Col>
-                        <Col className='hover:text-menu-button active:text-menu-active'>
-                            {dict.kitten}
+                        <Col>
+                            <Link
+                                className={`${
+                                    selectedPage === '/kittens' &&
+                                    'border-b-2 border-black'
+                                }`}
+                                to='/kittens'
+                                onClick={() =>
+                                    setSelectedPage('/kittens')
+                                }
+                            >
+                                {dict.kittens}
+                            </Link>
                         </Col>
-                        <Col className='hover:text-menu-button active:text-menu-active'>
-                            {dict.gallery}
+                        <Col>
+                            <Link
+                                className={`${
+                                    selectedPage === '/gallery' &&
+                                    'border-b-2 border-black'
+                                }`}
+                                to='/gallery'
+                                onClick={() =>
+                                    setSelectedPage('/gallery')
+                                }
+                            >
+                                {dict.gallery}
+                            </Link>
                         </Col>
-                        <Col className='hover:text-menu-button active:text-menu-active'>
-                            {dict.info}
+                        <Col>
+                            <Link
+                                className={`${
+                                    selectedPage === '/info' &&
+                                    'border-b-2 border-black'
+                                }`}
+                                to='/info'
+                                onClick={() =>
+                                    setSelectedPage('/info')
+                                }
+                            >
+                                {dict.info}
+                            </Link>
                         </Col>
-                        <Col className='hover:text-menu-button active:text-menu-active'>
-                            {dict.contacts}
+                        <Col>
+                            <Link
+                                className={`${
+                                    selectedPage === '/contacts' &&
+                                    'border-b-2 border-black'
+                                }`}
+                                to='/contacts'
+                                onClick={() =>
+                                    setSelectedPage('/contacts')
+                                }
+                            >
+                                {dict.contacts}
+                            </Link>
                         </Col>
                     </Row>
 

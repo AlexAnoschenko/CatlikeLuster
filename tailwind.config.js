@@ -18,14 +18,14 @@ module.exports = {
                 '15vh': '15vh',
             },
             minHeight: {
-                content: 'calc(100vh - 160px)',
+                content: 'calc(100vh - 64px)',
             },
             minWidth: {},
             height: {
                 header: '64px',
             },
             width: {
-                logo: '200px',
+                logo: '250px',
                 'sub-title': '330px',
             },
         },

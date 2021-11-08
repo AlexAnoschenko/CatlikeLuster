@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Layout } from 'antd';
 
-// import Footer from "./components/Footer/Footer";
+// import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import AppRouter from './components/AppRouter/AppRouter';
 
