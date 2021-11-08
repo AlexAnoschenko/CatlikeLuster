@@ -8,8 +8,6 @@ export interface IRoute {
   exact?: boolean;
 }
 
-
-
 export const routes: IRoute[] = [
   { path: RouteName.LANDING_PAGE, component: Landing, exact: true },
   { path: RouteName.CONTACTS_PAGE, component: Contacts, exact: true },

@@ -1,23 +1,37 @@
-import { Col, Layout, Row } from "antd";
-import { FC } from "react";
-import "./styles.css";
+import { Col, Layout, Row } from 'antd';
+import { FC } from 'react';
 
 const Navbar: FC = () => {
   return (
-    <Layout.Header style={{ height: 64, background: "#e7e7e7" }}>
-      <Row style={{ height: 64 }} align="middle" justify="space-between">
+    <Layout.Header className='h-header bg-header'>
+      <Row className='h-full' align='middle' justify='space-between'>
         <img
-          src="https://i.ibb.co/bXW5r21/logo.png"
-          alt="logo"
-          style={{ width: 200 }}
+          src='https://i.ibb.co/bXW5r21/logo.png'
+          alt='logo'
+          className='w-logo'
         />
-        <Row gutter={30} className="menu-text">
-          <Col className="menu-text-item-main">MAIN</Col>
-          <Col className="menu-text-item">PARENTS</Col>
-          <Col className="menu-text-item">KITTEN</Col>
-          <Col className="menu-text-item">GALLERY</Col>
-          <Col className="menu-text-item">INFO</Col>
-          <Col className="menu-text-item">CONTACTS</Col>
+        <Row
+          gutter={30}
+          className='text-lg cursor-pointer select-none nunito'
+        >
+          <Col className='text-menu-button active:text-menu-active'>
+            MAIN
+          </Col>
+          <Col className='hover:text-menu-button active:text-menu-active'>
+            PARENTS
+          </Col>
+          <Col className='hover:text-menu-button active:text-menu-active'>
+            KITTEN
+          </Col>
+          <Col className='hover:text-menu-button active:text-menu-active'>
+            GALLERY
+          </Col>
+          <Col className='hover:text-menu-button active:text-menu-active'>
+            INFO
+          </Col>
+          <Col className='hover:text-menu-button active:text-menu-active'>
+            CONTACTS
+          </Col>
         </Row>
       </Row>
     </Layout.Header>
