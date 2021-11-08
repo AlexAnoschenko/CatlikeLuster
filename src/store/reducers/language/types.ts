@@ -6,7 +6,7 @@ export enum LanguageActionEnum {
     SET_LANGUAGE = 'SET_LANGUAGE',
 }
 
-interface SetLanguageAction {
+export interface SetLanguageAction {
     type: LanguageActionEnum.SET_LANGUAGE;
     payload: string;
 }

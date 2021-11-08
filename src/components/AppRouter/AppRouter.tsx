@@ -3,13 +3,8 @@ import { Switch, Route, Redirect } from 'react-router';
 
 import { RouteName } from '../../constants';
 import { routes } from '../../router';
-import { useTypedSelector } from '../../hooks/useTypedSelector';
 
 const AppRouter: FC = () => {
-    const { language } = useTypedSelector((state) => state.language);
-
-    console.log(language);
-
     return (
         <Switch>
             {routes.map((route) => (
