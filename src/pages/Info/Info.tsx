@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC } from "react";
 
 const Info: FC = () => {
-    return <div>Info</div>;
+  return <div className="page">Info</div>;
 };
 
 export default Info;

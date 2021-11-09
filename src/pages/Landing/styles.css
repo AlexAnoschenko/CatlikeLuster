@@ -1,21 +1,22 @@
 .main {
-    background: 25% 25% / cover no-repeat
-        url('../../assets/png/landing.png');
-    height: calc(100vh - 64px);
+  position: absolute;
+  background: 25% 25% / cover no-repeat url("../../assets/png/landing.png");
+  height: calc(100vh - 64px);
+  left: 0;
+  right: 0;
 }
 
 .big-logo {
-    background: 25% 25% / cover no-repeat
-        url('../../assets/png/big-logo.png');
+  background: 25% 25% / cover no-repeat url("../../assets/png/big-logo.png");
 }
 
 .title {
-    font: small-caps 44px/1 Nunito, sans-serif;
-    font-weight: bold;
+  font: small-caps 44px/1 Nunito, sans-serif;
+  font-weight: bold;
 }
 
 .title-end {
-    font: small-caps 44px/1 Nunito, sans-serif;
-    color: yellowgreen;
-    font-weight: bold;
+  font: small-caps 44px/1 Nunito, sans-serif;
+  color: yellowgreen;
+  font-weight: bold;
 }

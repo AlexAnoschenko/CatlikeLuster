@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC } from "react";
 
 const Kittens: FC = () => {
-    return <div>Kittens</div>;
+  return <div className="page">Kittens</div>;
 };
 
 export default Kittens;

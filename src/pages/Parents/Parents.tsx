@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC } from "react";
 
 const Parents: FC = () => {
-    return <div>Parents</div>;
+  return <div className="page">Parents</div>;
 };
 
 export default Parents;
