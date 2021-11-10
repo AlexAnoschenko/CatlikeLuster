@@ -16,6 +16,7 @@ module.exports = {
             },
             spacing: {
                 '15vh': '15vh',
+                '50px': '50px',
             },
             minHeight: {
                 content: 'calc(100vh - 64px)',
