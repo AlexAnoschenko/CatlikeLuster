@@ -7,7 +7,7 @@ export interface IParentCard {
 export const parentsCards: IParentCard[] = [
     {
         image: 'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
-        title: 'KING FORCEPRIDE',
+        title: 'FORCEPRIDE KING',
     },
     {
         image: 'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
@@ -15,6 +15,6 @@ export const parentsCards: IParentCard[] = [
     },
     {
         image: 'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
-        title: 'G-LEXIE CALLATEYA',
+        title: 'G-LEXIE CALLATEIA',
     },
 ];

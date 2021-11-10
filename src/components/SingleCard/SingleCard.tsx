@@ -8,6 +8,7 @@ const ParentCard = ({ image, title, path = '' }: IParentCard) => {
             hoverable
             style={{ width: 270 }}
             cover={<img alt='example' src={image} />}
+            className='shadow-xl'
         >
             <div
                 title={title}
