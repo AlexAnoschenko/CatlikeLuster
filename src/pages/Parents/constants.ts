@@ -1,20 +1,42 @@
-export interface IParentCard {
-    image: string;
-    title: string;
-    path?: string;
-}
+import { ParentProps } from './types';
 
-export const parentsCards: IParentCard[] = [
+export const parentsCards: ParentProps[] = [
     {
-        image: 'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+        images: [
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+        ],
         title: 'FORCEPRIDE KING',
     },
     {
-        image: 'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+        images: [
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+        ],
         title: 'KALIE FAIRYSAVAGE',
     },
     {
-        image: 'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+        images: [
+            'https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg',
+        ],
         title: 'G-LEXIE CALLATEIA',
     },
 ];

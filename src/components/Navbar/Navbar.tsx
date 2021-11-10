@@ -14,8 +14,6 @@ const Navbar: FC = (props) => {
     const dict = setLanguage(language);
     const { setLang } = useActions();
 
-    console.log(pathname);
-
     const selectLanguage = (lang: string) => {
         setLang(lang);
     };
