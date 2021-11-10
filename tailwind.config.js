@@ -12,11 +12,12 @@ module.exports = {
                 'menu-active': '#c6e92c',
             },
             fontSize: {
-                'sub-title': '19.4px',
+                'sub-title': '19.2px',
             },
             spacing: {
                 '15vh': '15vh',
                 '50px': '50px',
+                '20%': '20%',
             },
             minHeight: {
                 content: 'calc(100vh - 64px)',
@@ -28,6 +29,7 @@ module.exports = {
             width: {
                 logo: '250px',
                 'sub-title': '330px',
+                'contact-icon': '50px',
             },
         },
     },
