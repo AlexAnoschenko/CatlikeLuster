@@ -9,8 +9,6 @@ const ParentsModal = ({
     title,
     currentParent,
 }: ParentsModalProps) => {
-    console.log(currentParent);
-
     return (
         <Modal
             title={title}
