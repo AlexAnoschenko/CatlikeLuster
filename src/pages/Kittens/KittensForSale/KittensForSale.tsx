@@ -1,13 +1,12 @@
-import { useState } from 'react';
-import { Row, Col } from 'antd';
-import { FC } from 'react';
+import { FC, useState } from 'react';
+import { Col, Row } from 'antd';
 
-import ParentsModal from '../../components/ParentsModal/ParentsModal';
-import ParentCard from '../../components/ParentCard/ParentCard';
-import { parentsCards } from './constants';
-import { ParentProps } from './types';
+import ParentsModal from '../../../components/ParentsModal/ParentsModal';
+import ParentCard from '../../../components/ParentCard/ParentCard';
+import { ParentProps } from '../../Parents/types';
+import { kittensForSaleCards } from '../constants';
 
-const Parents: FC = () => {
+const KittensForSale: FC = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [currentParent, setCurrentParent] = useState<ParentProps>({
     images: [],
@@ -28,15 +27,15 @@ const Parents: FC = () => {
   };
 
   return (
-    <div className='flex justify-center bg-bg-pages min-h-content page px-50px pt-60'>
+    <div className='flex justify-center pt-10 bg-bg-pages min-h-content page px-50px pb-50px'>
       <ParentsModal
         isModalVisible={isModalVisible}
         handleCancel={handleCancel}
         currentParent={currentParent}
       />
 
-      <Row gutter={[70, 40]}>
-        {parentsCards.map((parent) => (
+      <Row justify='center' gutter={[70, 40]}>
+        {kittensForSaleCards.map((parent) => (
           <Col key={parent.title}>
             <ParentCard parent={parent} showModal={showModal} />
           </Col>
@@ -46,4 +45,4 @@ const Parents: FC = () => {
   );
 };
 
-export default Parents;
+export default KittensForSale;
