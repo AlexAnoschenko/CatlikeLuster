@@ -7,7 +7,7 @@ const ParentCard = ({ parent, showModal }: IParentCard) => {
 
   return (
     <Card
-      hoverableF
+      hoverable
       style={{ width: 270 }}
       cover={
         <img
