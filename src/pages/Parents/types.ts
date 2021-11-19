@@ -1,9 +1,10 @@
 export interface ParentProps {
-    images: string[];
-    title: string;
+  id: string;
+  images: string[];
+  name: string;
 }
 
 export interface IParentCard {
-    parent: ParentProps;
-    showModal?: any;
+  parent: ParentProps;
+  showModal?: any;
 }

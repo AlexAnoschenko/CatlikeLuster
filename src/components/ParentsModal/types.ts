@@ -1,8 +1,8 @@
-import { ParentProps } from '../../pages/Parents/types';
+import { ParentProps } from "../../pages/Parents/types";
 
 export interface ParentsModalProps {
-    isModalVisible: boolean;
-    handleCancel?: () => void;
-    title?: string;
-    currentParent: ParentProps;
+  isModalVisible: boolean;
+  handleCancel?: () => void;
+  name?: string;
+  currentParent: ParentProps;
 }
