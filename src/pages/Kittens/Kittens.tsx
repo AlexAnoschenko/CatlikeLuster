@@ -21,8 +21,11 @@ const Kittens: FC = () => {
         isTabletOrMobile ? 'pt-50px pb-50px h-full' : 'pt-60'
       }`}
     >
-      <Row gutter={[70, 40]} className='flex justify-center'>
-        <Col>
+      <Row
+        gutter={[70, 40]}
+        className='flex items-center justify-center'
+      >
+        <Col style={{ height: 277 }}>
           <Link to='/kittens/for-sale'>
             <CardDefault
               image='https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg'
@@ -30,7 +33,7 @@ const Kittens: FC = () => {
             />
           </Link>
         </Col>
-        <Col>
+        <Col style={{ height: 277 }}>
           <Link to='/kittens/sold'>
             <CardDefault
               image='https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/06/prostye-risunki-dlya-srisovki-23.jpg'
