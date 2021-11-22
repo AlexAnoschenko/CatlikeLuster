@@ -19,7 +19,7 @@ const MobileNavbar = (props: any) => {
   return (
     <div className=''>
       <Menu {...props}>
-        <Row gutter={20} style={{ display: 'flex' }}>
+        <Row tabIndex={-1} gutter={20} style={{ display: 'flex' }}>
           <Col className='w-max'>
             <img
               style={{ width: 40 }}
