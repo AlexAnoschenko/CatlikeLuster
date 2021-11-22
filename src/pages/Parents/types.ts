@@ -7,4 +7,5 @@ export interface ParentProps {
 export interface IParentCard {
   parent: ParentProps;
   showModal?: any;
+  height?: number;
 }

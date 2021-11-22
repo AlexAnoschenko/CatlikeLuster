@@ -6,8 +6,13 @@ import ParentCard from '../../components/ParentCard/ParentCard';
 import { useGetDataFromDB } from './hooks/useGetDataFromDB';
 
 const Parents: FC = () => {
-  const { isModalVisible, currentParent, parents, showModal, handleCancel } =
-    useGetDataFromDB();
+  const {
+    isModalVisible,
+    currentParent,
+    parents,
+    showModal,
+    handleCancel,
+  } = useGetDataFromDB();
 
   return (
     <div className='flex justify-center bg-bg-pages min-h-content page px-50px pt-60'>
@@ -20,7 +25,11 @@ const Parents: FC = () => {
       <Row gutter={[70, 40]}>
         {parents?.map((parent: any) => (
           <Col key={parent.name}>
-            <ParentCard parent={parent} showModal={showModal} />
+            <ParentCard
+              parent={parent}
+              showModal={showModal}
+              height={300}
+            />
           </Col>
         ))}
       </Row>
