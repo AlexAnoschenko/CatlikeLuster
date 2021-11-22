@@ -5,8 +5,9 @@ import { Link, useHistory } from 'react-router-dom';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import setLanguage from '../Dictionary/index';
 import { useActions } from '../../hooks/useActions';
+import { LocalStorage, RouteName } from '../../constants';
 
-const Navbar: FC = (props) => {
+const Navbar: FC = () => {
   const router = useHistory();
   const { pathname } = router.location;
   const [selectedPage, setSelectedPage] = useState(pathname);
@@ -16,6 +17,7 @@ const Navbar: FC = (props) => {
 
   const selectLanguage = (lang: string) => {
     setLang(lang);
+    localStorage.setItem(LocalStorage.LANGUAGE, lang);
   };
 
   return (
@@ -23,8 +25,8 @@ const Navbar: FC = (props) => {
       <Row className='h-full' align='middle' justify='space-between'>
         <Link
           className='cursor-pointer'
-          to='/main'
-          onClick={() => setSelectedPage('/')}
+          to={RouteName.LANDING_PAGE}
+          onClick={() => setSelectedPage(RouteName.LANDING_PAGE)}
         >
           <img
             src='https://i.ibb.co/bXW5r21/logo.png'
@@ -38,11 +40,13 @@ const Navbar: FC = (props) => {
             <Col>
               <Link
                 className={`cursor-pointer ${
-                  selectedPage === '/' &&
+                  selectedPage === RouteName.LANDING_PAGE &&
                   'border-b-2 border-black text-menu-active'
                 }`}
-                to='/main'
-                onClick={() => setSelectedPage('/')}
+                to={RouteName.LANDING_PAGE}
+                onClick={() =>
+                  setSelectedPage(RouteName.LANDING_PAGE)
+                }
               >
                 {dict.main}
               </Link>
@@ -50,11 +54,13 @@ const Navbar: FC = (props) => {
             <Col>
               <Link
                 className={`cursor-pointer ${
-                  selectedPage === '/parents' &&
+                  selectedPage === RouteName.PARENTS_PAGE &&
                   'border-b-2 border-black text-menu-active'
                 }`}
-                to='/parents'
-                onClick={() => setSelectedPage('/parents')}
+                to={RouteName.PARENTS_PAGE}
+                onClick={() =>
+                  setSelectedPage(RouteName.PARENTS_PAGE)
+                }
               >
                 {dict.parents}
               </Link>
@@ -62,11 +68,13 @@ const Navbar: FC = (props) => {
             <Col>
               <Link
                 className={`cursor-pointer ${
-                  selectedPage === '/kittens' &&
+                  selectedPage === RouteName.KITTENS_PAGE &&
                   'border-b-2 border-black text-menu-active'
                 }`}
-                to='/kittens'
-                onClick={() => setSelectedPage('/kittens')}
+                to={RouteName.KITTENS_PAGE}
+                onClick={() =>
+                  setSelectedPage(RouteName.KITTENS_PAGE)
+                }
               >
                 {dict.kittens}
               </Link>
@@ -74,11 +82,13 @@ const Navbar: FC = (props) => {
             <Col>
               <Link
                 className={`cursor-pointer ${
-                  selectedPage === '/gallery' &&
+                  selectedPage === RouteName.GALLERY_PAGE &&
                   'border-b-2 border-black text-menu-active'
                 }`}
-                to='/gallery'
-                onClick={() => setSelectedPage('/gallery')}
+                to={RouteName.GALLERY_PAGE}
+                onClick={() =>
+                  setSelectedPage(RouteName.GALLERY_PAGE)
+                }
               >
                 {dict.gallery}
               </Link>
@@ -86,11 +96,11 @@ const Navbar: FC = (props) => {
             <Col>
               <Link
                 className={`cursor-pointer ${
-                  selectedPage === '/info' &&
+                  selectedPage === RouteName.INFO_PAGE &&
                   'border-b-2 border-black text-menu-active'
                 }`}
-                to='/info'
-                onClick={() => setSelectedPage('/info')}
+                to={RouteName.INFO_PAGE}
+                onClick={() => setSelectedPage(RouteName.INFO_PAGE)}
               >
                 {dict.info}
               </Link>
@@ -98,11 +108,13 @@ const Navbar: FC = (props) => {
             <Col>
               <Link
                 className={`cursor-pointer ${
-                  selectedPage === '/contacts' &&
+                  selectedPage === RouteName.CONTACTS_PAGE &&
                   'border-b-2 border-black text-menu-active'
                 }`}
-                to='/contacts'
-                onClick={() => setSelectedPage('/contacts')}
+                to={RouteName.CONTACTS_PAGE}
+                onClick={() =>
+                  setSelectedPage(RouteName.CONTACTS_PAGE)
+                }
               >
                 {dict.contacts}
               </Link>
