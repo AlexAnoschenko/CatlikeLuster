@@ -22,7 +22,7 @@ const App: FC = () => {
   return (
     <Layout className='bg-bg-pages'>
       <Navbar />
-      <Layout.Content className='pt-64px min-h-content'>
+      <Layout.Content className='h-screen pt-64px'>
         <AppRouter />
       </Layout.Content>
       {/* <Footer /> */}
