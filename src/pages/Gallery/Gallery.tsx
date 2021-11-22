@@ -7,10 +7,10 @@ import { db } from '../../firebase-config';
 const Gallery: FC = () => {
   const [galleryImages, setGalleryImages] = useState<any>([]);
 
-  const parentsCollectionRef = collection(db, 'gallery');
+  const galleryCollectionRef = collection(db, 'gallery');
 
   const getGallery = async () => {
-    const data = await getDocs(parentsCollectionRef);
+    const data = await getDocs(galleryCollectionRef);
     setGalleryImages(
       data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
     );
