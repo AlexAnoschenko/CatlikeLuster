@@ -4,13 +4,17 @@ import { collection, getDocs } from '@firebase/firestore';
 import { db } from '../../../firebase-config';
 import { ParentProps } from '../types';
 
+const initialCurrentParent = {
+  id: '',
+  images: [],
+  name: '',
+};
+
 export const useGetDataFromDB = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [currentParent, setCurrentParent] = useState<ParentProps>({
-    id: '',
-    images: [],
-    name: '',
-  });
+  const [currentParent, setCurrentParent] = useState<ParentProps>(
+    initialCurrentParent
+  );
   const [parents, setParents] = useState<any>([]);
 
   const parentsCollectionRef = collection(db, 'parents');
@@ -22,16 +26,14 @@ export const useGetDataFromDB = () => {
 
   const handleCancel = () => {
     setIsModalVisible(false);
-    setCurrentParent({
-      id: '',
-      images: [],
-      name: '',
-    });
+    setCurrentParent(initialCurrentParent);
   };
 
   const getParents = async () => {
     const data = await getDocs(parentsCollectionRef);
-    setParents(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    setParents(
+      data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+    );
   };
 
   useEffect(() => {
@@ -40,5 +42,11 @@ export const useGetDataFromDB = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return { isModalVisible, currentParent, parents, showModal, handleCancel };
+  return {
+    isModalVisible,
+    currentParent,
+    parents,
+    showModal,
+    handleCancel,
+  };
 };

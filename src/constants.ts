@@ -8,3 +8,7 @@ export enum RouteName {
   KITTENS_FOR_SALE_PAGE = '/kittens/for-sale',
   KITTENS_SOLD_PAGE = '/kittens/sold',
 }
+
+export enum LocalStorage {
+  LANGUAGE = 'language',
+}
