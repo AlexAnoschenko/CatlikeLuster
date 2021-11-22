@@ -1,13 +1,15 @@
 .main {
   position: absolute;
-  background: 25% 25% / cover no-repeat url("../../assets/png/landing.png");
+  background: 25% 25% / cover no-repeat
+    url('../../assets/png/landing.webp');
   height: calc(100vh - 64px);
   left: 0;
   right: 0;
 }
 
 .big-logo {
-  background: 25% 25% / cover no-repeat url("../../assets/png/big-logo.png");
+  background: 25% 25% / cover no-repeat
+    url('../../assets/png/big-logo.png');
 }
 
 .title {
