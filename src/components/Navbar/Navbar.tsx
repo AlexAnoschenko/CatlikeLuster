@@ -1,5 +1,5 @@
-import { Col, Layout, Row } from 'antd';
 import { FC, useState } from 'react';
+import { Col, Layout, Row } from 'antd';
 import { Link, useHistory } from 'react-router-dom';
 
 import { useTypedSelector } from '../../hooks/useTypedSelector';
