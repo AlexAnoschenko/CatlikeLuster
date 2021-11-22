@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Col, Row } from 'antd';
+import { useMediaQuery } from 'react-responsive';
 
 import CardDefault from '../../components/CardDefault/CardDefault';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
@@ -10,9 +11,17 @@ const Kittens: FC = () => {
   const { language } = useTypedSelector((state) => state.language);
   const dict = setLanguage(language);
 
+  const isTabletOrMobile = useMediaQuery({
+    query: '(max-width: 1299px)',
+  });
+
   return (
-    <div className='flex justify-center bg-bg-pages min-h-content page px-50px pt-60'>
-      <Row gutter={[70, 40]}>
+    <div
+      className={`flex justify-center bg-bg-pages min-h-content page px-50px ${
+        isTabletOrMobile ? 'pt-50px pb-50px h-full' : 'pt-60'
+      }`}
+    >
+      <Row gutter={[70, 40]} className='flex justify-center'>
         <Col>
           <Link to='/kittens/for-sale'>
             <CardDefault
