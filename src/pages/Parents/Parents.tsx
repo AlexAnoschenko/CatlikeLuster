@@ -32,7 +32,7 @@ const Parents: FC = () => {
         currentParent={currentParent}
       />
 
-      <Row gutter={[70, 40]}>
+      <Row gutter={[70, 40]} className='flex justify-center'>
         {parents?.map((parent: ParentProps) => (
           <Col key={parent.name}>
             <ParentCard
