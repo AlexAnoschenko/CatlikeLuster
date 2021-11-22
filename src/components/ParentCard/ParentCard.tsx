@@ -2,7 +2,11 @@ import { Card } from 'antd';
 
 import { IParentCard } from '../../pages/Parents/types';
 
-const ParentCard = ({ parent, showModal }: IParentCard) => {
+const ParentCard = ({
+  parent,
+  showModal,
+  height = 225,
+}: IParentCard) => {
   const { images, name } = parent;
 
   return (
@@ -13,7 +17,7 @@ const ParentCard = ({ parent, showModal }: IParentCard) => {
         <img
           alt='example'
           src={images[0]}
-          style={{ height: 225, objectFit: 'cover' }}
+          style={{ height, objectFit: 'cover' }}
         />
       }
       className='shadow-xl'
