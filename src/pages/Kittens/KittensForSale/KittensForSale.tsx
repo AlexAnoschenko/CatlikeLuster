@@ -1,17 +1,17 @@
-import { FC, useState } from "react";
-import { Col, Row } from "antd";
+import { FC, useState } from 'react';
+import { Col, Row } from 'antd';
 
-import ParentsModal from "../../../components/ParentsModal/ParentsModal";
-import ParentCard from "../../../components/ParentCard/ParentCard";
-import { ParentProps } from "../../Parents/types";
-import { kittensForSaleCards } from "../constants";
+import ParentsModal from '../../../components/ParentsModal/ParentsModal';
+import ParentCard from '../../../components/ParentCard/ParentCard';
+import { ParentProps } from '../../Parents/types';
+import { kittensForSaleCards } from '../constants';
 
 const KittensForSale: FC = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [currentParent, setCurrentParent] = useState<ParentProps>({
-    id: "",
+    id: '',
     images: [],
-    name: "",
+    name: '',
   });
 
   const showModal = (parent: ParentProps) => {
@@ -22,21 +22,25 @@ const KittensForSale: FC = () => {
   const handleCancel = () => {
     setIsModalVisible(false);
     setCurrentParent({
-      id: "",
+      id: '',
       images: [],
-      name: "",
+      name: '',
     });
   };
 
   return (
-    <div className="flex justify-center pt-10 bg-bg-pages min-h-content page px-50px pb-50px">
+    <div className='flex items-center justify-center pt-10 bg-bg-pages min-h-content page px-50px pb-50px'>
       <ParentsModal
         isModalVisible={isModalVisible}
         handleCancel={handleCancel}
         currentParent={currentParent}
       />
 
-      <Row justify="center" gutter={[70, 40]}>
+      <Row
+        justify='center'
+        gutter={[70, 40]}
+        style={{ height: 'fit-content' }}
+      >
         {kittensForSaleCards.map((parent) => (
           <Col key={parent.name}>
             <ParentCard parent={parent} showModal={showModal} />
