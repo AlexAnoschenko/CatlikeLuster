@@ -16,8 +16,6 @@ const Gallery: FC = () => {
     );
   };
 
-  console.log(galleryImages);
-
   useEffect(() => {
     getGallery();
 
