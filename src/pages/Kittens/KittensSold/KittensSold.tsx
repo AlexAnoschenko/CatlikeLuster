@@ -1,5 +1,6 @@
 import { FC, useState } from 'react';
 import { Col, Row } from 'antd';
+import { useMediaQuery } from 'react-responsive';
 
 import ParentsModal from '../../../components/ParentsModal/ParentsModal';
 import ParentCard from '../../../components/ParentCard/ParentCard';
@@ -13,6 +14,10 @@ const KittensForSale: FC = () => {
     id: '',
     images: [],
     name: '',
+  });
+
+  const isTabletOrMobile = useMediaQuery({
+    query: '(max-width: 1299px)',
   });
 
   const showModal = (parent: ParentProps) => {
@@ -45,7 +50,13 @@ const KittensForSale: FC = () => {
         style={{ height: 'fit-content' }}
       >
         {kittensSoldCards.map((parent) => (
-          <Col key={parent.name}>
+          <Col
+            key={parent.name}
+            style={{
+              paddingLeft: isTabletOrMobile ? 0 : 35,
+              paddingRight: isTabletOrMobile ? 0 : 35,
+            }}
+          >
             <ParentCard parent={parent} showModal={showModal} />
           </Col>
         ))}

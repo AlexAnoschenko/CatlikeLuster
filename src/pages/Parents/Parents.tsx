@@ -1,5 +1,6 @@
-import { Row, Col } from 'antd';
 import { FC } from 'react';
+import { Row, Col } from 'antd';
+import { useMediaQuery } from 'react-responsive';
 
 import ParentsModal from '../../components/ParentsModal/ParentsModal';
 import ParentCard from '../../components/ParentCard/ParentCard';
@@ -15,8 +16,16 @@ const Parents: FC = () => {
     handleCancel,
   } = useGetDataFromDB();
 
+  const isTabletOrMobile = useMediaQuery({
+    query: '(max-width: 1299px)',
+  });
+
   return (
-    <div className='flex justify-center bg-bg-pages min-h-content page px-50px pt-60'>
+    <div
+      className={`flex justify-center bg-bg-pages min-h-content page px-50px ${
+        isTabletOrMobile ? 'pt-50px pb-50px' : 'pt-60'
+      }`}
+    >
       <ParentsModal
         isModalVisible={isModalVisible}
         handleCancel={handleCancel}
