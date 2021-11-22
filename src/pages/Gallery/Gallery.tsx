@@ -28,7 +28,7 @@ const Gallery: FC = () => {
     <div className='page pt-50px px-50px'>
       <Image.PreviewGroup>
         <Row gutter={[30, 30]} justify='center'>
-          {galleryImages[0]?.images.map((image: any) => (
+          {galleryImages[0]?.images.map((image: string) => (
             <Col key={image}>
               <Image width={200} src={image} />
             </Col>

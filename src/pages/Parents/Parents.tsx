@@ -4,6 +4,7 @@ import { FC } from 'react';
 import ParentsModal from '../../components/ParentsModal/ParentsModal';
 import ParentCard from '../../components/ParentCard/ParentCard';
 import { useGetDataFromDB } from './hooks/useGetDataFromDB';
+import { ParentProps } from './types';
 
 const Parents: FC = () => {
   const {
@@ -23,7 +24,7 @@ const Parents: FC = () => {
       />
 
       <Row gutter={[70, 40]}>
-        {parents?.map((parent: any) => (
+        {parents?.map((parent: ParentProps) => (
           <Col key={parent.name}>
             <ParentCard
               parent={parent}
