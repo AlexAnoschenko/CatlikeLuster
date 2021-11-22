@@ -5,6 +5,7 @@ import ParentsModal from '../../../components/ParentsModal/ParentsModal';
 import ParentCard from '../../../components/ParentCard/ParentCard';
 import { ParentProps } from '../../Parents/types';
 import { kittensForSaleCards } from '../constants';
+import BackButton from '../../../components/BackButton/BackButton';
 
 const KittensForSale: FC = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -30,6 +31,8 @@ const KittensForSale: FC = () => {
 
   return (
     <div className='flex items-center justify-center pt-10 bg-bg-pages min-h-content page px-50px pb-50px'>
+      <BackButton />
+
       <ParentsModal
         isModalVisible={isModalVisible}
         handleCancel={handleCancel}

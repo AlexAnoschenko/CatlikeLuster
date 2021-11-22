@@ -10,7 +10,7 @@ module.exports = {
       }),
       textColor: {
         'menu-button': '#9acd32',
-        'menu-active': '#c6e92c',
+        'menu-active': '#E58E37',
       },
       fontSize: {
         'sub-title': '19.2px',

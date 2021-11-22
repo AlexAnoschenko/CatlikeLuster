@@ -38,7 +38,8 @@ const Navbar: FC = (props) => {
             <Col>
               <Link
                 className={`cursor-pointer ${
-                  selectedPage === '/' && 'border-b-2 border-black'
+                  selectedPage === '/' &&
+                  'border-b-2 border-black text-menu-active'
                 }`}
                 to='/main'
                 onClick={() => setSelectedPage('/')}
@@ -50,7 +51,7 @@ const Navbar: FC = (props) => {
               <Link
                 className={`cursor-pointer ${
                   selectedPage === '/parents' &&
-                  'border-b-2 border-black'
+                  'border-b-2 border-black text-menu-active'
                 }`}
                 to='/parents'
                 onClick={() => setSelectedPage('/parents')}
@@ -62,7 +63,7 @@ const Navbar: FC = (props) => {
               <Link
                 className={`cursor-pointer ${
                   selectedPage === '/kittens' &&
-                  'border-b-2 border-black'
+                  'border-b-2 border-black text-menu-active'
                 }`}
                 to='/kittens'
                 onClick={() => setSelectedPage('/kittens')}
@@ -74,7 +75,7 @@ const Navbar: FC = (props) => {
               <Link
                 className={`cursor-pointer ${
                   selectedPage === '/gallery' &&
-                  'border-b-2 border-black'
+                  'border-b-2 border-black text-menu-active'
                 }`}
                 to='/gallery'
                 onClick={() => setSelectedPage('/gallery')}
@@ -86,7 +87,7 @@ const Navbar: FC = (props) => {
               <Link
                 className={`cursor-pointer ${
                   selectedPage === '/info' &&
-                  'border-b-2 border-black'
+                  'border-b-2 border-black text-menu-active'
                 }`}
                 to='/info'
                 onClick={() => setSelectedPage('/info')}
@@ -98,7 +99,7 @@ const Navbar: FC = (props) => {
               <Link
                 className={`cursor-pointer ${
                   selectedPage === '/contacts' &&
-                  'border-b-2 border-black'
+                  'border-b-2 border-black text-menu-active'
                 }`}
                 to='/contacts'
                 onClick={() => setSelectedPage('/contacts')}
