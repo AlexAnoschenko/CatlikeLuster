@@ -10,23 +10,12 @@ const Landing: FC = () => {
 
   return (
     <div className={`main ${isTabletOrMobile && 'bg-none'}`}>
-      <div className='flex flex-col justify-center select-none pt-15vh nunito'>
-        <div className='flex justify-center'>
-          <img
-            src='https://i.ibb.co/J7WRPdw/big-logo.png'
-            alt='big-logo'
-            className='w-28'
-          />
-        </div>
-        <div className='flex justify-center'>
-          <h1 className='title'>CATLIKE</h1>
-          <h1 className='title-end'>LUSTER</h1>
-        </div>
-        <div className='flex justify-center'>
-          <h2 className='border-t-2 border-black border-solid w-sub-title text-sub-title'>
-            ПИТОМНИК БЕНГАЛЬСКИХ КОШЕК
-          </h2>
-        </div>
+      <div className='flex justify-center mt-20'>
+        <img
+          src='https://firebasestorage.googleapis.com/v0/b/catlikeluster-b7e7d.appspot.com/o/Landing%20Page%2Fmain-logo.png?alt=media&token=900e0e8a-af49-4681-84e2-df71a9f820f2'
+          alt='main-logo'
+          width={isTabletOrMobile ? 220 : 400}
+        />
       </div>
     </div>
   );
