@@ -47,7 +47,7 @@ const KittensForSale: FC = () => {
       <Row
         justify='center'
         gutter={[70, 40]}
-        style={{ height: 'fit-content' }}
+        style={{ height: 'fit-content', gap: 30 }}
       >
         {kittensForSaleCards.map((parent) => (
           <Col
