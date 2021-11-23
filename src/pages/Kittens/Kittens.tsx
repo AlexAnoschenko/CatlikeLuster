@@ -18,7 +18,7 @@ const Kittens: FC = () => {
   return (
     <div
       className={`flex justify-center bg-bg-pages min-h-content page px-50px ${
-        isTabletOrMobile ? 'pt-50px pb-50px h-full' : 'pt-60'
+        isTabletOrMobile && 'pt-50px pb-50px h-full'
       }`}
     >
       <Row
