@@ -4,6 +4,7 @@ import { collection, getDocs } from '@firebase/firestore';
 import { db } from '../../../firebase-config';
 
 export const useGallery = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [galleryImages, setGalleryImages] = useState<any>([]);
   const galleryCollectionRef = collection(db, 'gallery');
 
@@ -12,6 +13,7 @@ export const useGallery = () => {
     setGalleryImages(
       data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
     );
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -21,6 +23,7 @@ export const useGallery = () => {
   }, []);
 
   return {
+    isLoading,
     galleryImages,
   };
 };
