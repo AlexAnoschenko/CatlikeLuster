@@ -1,38 +1,15 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { Col, Row } from 'antd';
-import { useMediaQuery } from 'react-responsive';
 
 import ParentsModal from '../../../components/ParentsModal/ParentsModal';
 import ParentCard from '../../../components/ParentCard/ParentCard';
-import { ParentProps } from '../../Parents/types';
-import { kittensForSaleCards } from '../constants';
 import BackButton from '../../../components/BackButton/BackButton';
+import { useKittensSaleSold } from '../hooks/useKittensSaleSold';
+import { kittensForSaleCards } from '../constants';
 
 const KittensForSale: FC = () => {
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [currentParent, setCurrentParent] = useState<ParentProps>({
-    id: '',
-    images: [],
-    name: '',
-  });
-
-  const isTabletOrMobile = useMediaQuery({
-    query: '(max-width: 1299px)',
-  });
-
-  const showModal = (parent: ParentProps) => {
-    setIsModalVisible(true);
-    setCurrentParent(parent);
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
-    setCurrentParent({
-      id: '',
-      images: [],
-      name: '',
-    });
-  };
+  const { isModalVisible, currentParent, showModal, handleCancel } =
+    useKittensSaleSold();
 
   return (
     <div className='flex items-center justify-center pt-10 bg-bg-pages min-h-content page px-50px pb-50px'>
@@ -44,19 +21,9 @@ const KittensForSale: FC = () => {
         currentParent={currentParent}
       />
 
-      <Row
-        justify='center'
-        gutter={[70, 40]}
-        style={{ height: 'fit-content', gap: 30 }}
-      >
+      <Row justify='center' gutter={[70, 40]} className='gap-10'>
         {kittensForSaleCards.map((parent) => (
-          <Col
-            key={parent.name}
-            style={{
-              paddingLeft: isTabletOrMobile ? 0 : 35,
-              paddingRight: isTabletOrMobile ? 0 : 35,
-            }}
-          >
+          <Col key={parent.name}>
             <ParentCard parent={parent} showModal={showModal} />
           </Col>
         ))}

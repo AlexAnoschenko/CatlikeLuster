@@ -10,12 +10,7 @@ const BackButton = () => {
         shape='circle'
         icon={<CaretLeftOutlined />}
         size='large'
-        style={{
-          top: '50%',
-          left: 10,
-          background: '#E58E37',
-        }}
-        className='fixed border-transparent hover:border-transparent'
+        className='fixed border-transparent hover:border-transparent top-50% left-10px bg-back-button'
       />
     </Link>
   );
