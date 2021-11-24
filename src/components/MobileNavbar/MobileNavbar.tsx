@@ -26,7 +26,8 @@ const MobileNavbar = (props: any) => {
             <img
               src='https://i.ibb.co/GdRBgGh/ru.png'
               alt='ru'
-              className={`cursor-pointer w-7 w-language-icon
+              className={`cursor-pointer w-language-icon ${
+                language === 'ru' &&
                 'border-2 border-indigo-600 rounded-full'
               }`}
               onClick={() => selectLanguage('ru')}
