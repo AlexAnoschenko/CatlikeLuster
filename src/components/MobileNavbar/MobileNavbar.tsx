@@ -1,35 +1,21 @@
 import { Col, Row } from 'antd';
 import { slide as Menu } from 'react-burger-menu';
 
-import { useTypedSelector } from '../../hooks/useTypedSelector';
-import setLanguage from '../Dictionary';
-import { LocalStorage, RouteName } from '../../constants';
-import { useActions } from '../../hooks/useActions';
+import { useMobileNavigator } from './hooks/useMobileNavbar';
+import { RouteName } from '../../constants';
 
 const MobileNavbar = (props: any) => {
-  const { language } = useTypedSelector((state) => state.language);
-  const dict = setLanguage(language);
-  const { setLang } = useActions();
-
-  const selectLanguage = (lang: string) => {
-    setLang(lang);
-    localStorage.setItem(LocalStorage.LANGUAGE, lang);
-  };
+  const { language, dict, selectLanguage } = useMobileNavigator();
 
   return (
-    <div className=''>
+    <div>
       <Menu {...props}>
-        <Row
-          className='focus:outline-none'
-          gutter={20}
-          style={{ display: 'flex' }}
-        >
+        <Row className='flex focus:outline-none' gutter={20}>
           <Col className='w-max'>
             <img
-              style={{ width: 40 }}
               src='https://i.ibb.co/DtbwYzn/en.png'
               alt='en'
-              className={`cursor-pointer w-7 ${
+              className={`cursor-pointer w-language-icon ${
                 language === 'en' &&
                 'border-2 border-indigo-600 rounded-full'
               }`}
@@ -38,11 +24,9 @@ const MobileNavbar = (props: any) => {
           </Col>
           <Col className='w-max'>
             <img
-              style={{ width: 40 }}
               src='https://i.ibb.co/GdRBgGh/ru.png'
               alt='ru'
-              className={`cursor-pointer w-7 ${
-                language === 'ru' &&
+              className={`cursor-pointer w-7 w-language-icon
                 'border-2 border-indigo-600 rounded-full'
               }`}
               onClick={() => selectLanguage('ru')}

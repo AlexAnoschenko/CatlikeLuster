@@ -1,22 +1,15 @@
 import { FC } from 'react';
-import { useMediaQuery } from 'react-responsive';
 
-import setLanguage from '../../components/Dictionary';
-import { useTypedSelector } from '../../hooks/useTypedSelector';
+import { useContact } from './hooks/useContact';
 import { contacts } from './constants';
 
 const Contacts: FC = () => {
-  const { language } = useTypedSelector((state) => state.language);
-  const dict = setLanguage(language);
-
-  const isTabletOrMobile = useMediaQuery({
-    query: '(max-width: 1299px)',
-  });
+  const { dict, isMobile } = useContact();
 
   return (
     <div
       className={`bg-bg-pages page pt-50px ${
-        isTabletOrMobile ? 'px-4' : 'px-50px'
+        isMobile ? 'px-4' : 'px-50px'
       }`}
     >
       <div className='mb-6 text-5xl font-bold text-center'>
@@ -25,17 +18,13 @@ const Contacts: FC = () => {
 
       <div
         className={`${
-          isTabletOrMobile ? 'mb-10' : 'mb-20'
+          isMobile ? 'mb-10' : 'mb-20'
         } text-2xl text-center`}
       >
         {dict.contactsText}
       </div>
 
-      <div
-        className={`flex justify-center ${
-          isTabletOrMobile && 'w-max'
-        }`}
-      >
+      <div className={`flex justify-center ${isMobile && 'w-max'}`}>
         <div className='w-min'>
           {contacts.map((contact) => (
             <a

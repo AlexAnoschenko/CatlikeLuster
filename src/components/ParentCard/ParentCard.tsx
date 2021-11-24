@@ -2,25 +2,20 @@ import { Card } from 'antd';
 
 import { IParentCard } from '../../pages/Parents/types';
 
-const ParentCard = ({
-  parent,
-  showModal,
-  height = 225,
-}: IParentCard) => {
+const ParentCard = ({ parent, showModal }: IParentCard) => {
   const { images, name } = parent;
 
   return (
     <Card
       hoverable
-      style={{ width: 270 }}
       cover={
         <img
           alt='example'
           src={images[0]}
-          style={{ height, objectFit: 'cover' }}
+          className='object-cover h-parent-card'
         />
       }
-      className='shadow-xl'
+      className='shadow-xl w-parent-card'
       onClick={() => showModal(parent)}
     >
       <div title={name} className='text-xl font-bold text-center'>
