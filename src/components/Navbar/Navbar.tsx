@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import MobileNavbar from '../MobileNavbar/MobileNavbar';
 import { useNavbar } from './hooks/useNavBar';
-import { RouteName } from '../../constants';
+import { RouteName } from '../../constants/constants';
 
 const Navbar: FC = () => {
   const {

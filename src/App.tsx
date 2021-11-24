@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { Layout } from 'antd';
 
-import Navbar from './components/Navbar/Navbar';
-import AppRouter from './components/AppRouter/AppRouter';
-import { useLanguageAndMobile } from './hooks/useLanguageAndMobile';
+import Navbar from 'components/Navbar/Navbar';
+import AppRouter from 'components/AppRouter/AppRouter';
+import { useLanguageAndMobile } from 'hooks/useLanguageAndMobile';
 
 import './App.css';
 

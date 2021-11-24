@@ -2,7 +2,7 @@ import { Col, Row } from 'antd';
 import { slide as Menu } from 'react-burger-menu';
 
 import { useMobileNavigator } from './hooks/useMobileNavbar';
-import { RouteName } from '../../constants';
+import { RouteName } from '../../constants/constants';
 
 const MobileNavbar = (props: any) => {
   const { language, dict, selectLanguage } = useMobileNavigator();

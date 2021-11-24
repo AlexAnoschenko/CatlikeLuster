@@ -6,7 +6,7 @@ import Gallery from '../pages/Gallery/Gallery';
 import Info from '../pages/Info/Info';
 import KittensForSale from '../pages/Kittens/KittensForSale/KittensForSale';
 import KittensSold from '../pages/Kittens/KittensSold/KittensSold';
-import { RouteName } from '../constants';
+import { RouteName } from '../constants/constants';
 
 export interface IRoute {
   path: string;

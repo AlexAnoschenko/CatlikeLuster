@@ -1,7 +1,7 @@
 import { useActions } from '../../../hooks/useActions';
 import { useTypedSelector } from '../../../hooks/useTypedSelector';
 import setLanguage from '../../Dictionary';
-import { LocalStorage } from '../../../constants';
+import { LocalStorage } from '../../../constants/constants';
 
 export const useMobileNavigator = () => {
   const { language } = useTypedSelector((state) => state.language);

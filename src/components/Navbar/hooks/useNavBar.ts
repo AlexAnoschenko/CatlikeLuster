@@ -4,7 +4,7 @@ import { useActions } from '../../../hooks/useActions';
 import { useIsMobile } from '../../../hooks/useIsMobile';
 import { useTypedSelector } from '../../../hooks/useTypedSelector';
 import setLanguage from '../../Dictionary';
-import { LocalStorage } from '../../../constants';
+import { LocalStorage } from '../../../constants/constants';
 
 export const useNavbar = () => {
   const router = useHistory();

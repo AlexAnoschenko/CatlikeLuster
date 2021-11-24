@@ -1,16 +1,23 @@
-import { FC } from "react";
-import { Switch, Route, Redirect, useLocation } from "react-router";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { FC } from 'react';
+import { Switch, Route, Redirect, useLocation } from 'react-router';
+import {
+  TransitionGroup,
+  CSSTransition,
+} from 'react-transition-group';
 
-import { RouteName } from "../../constants";
-import { routes } from "../../router";
+import { RouteName } from 'constants/constants';
+import { routes } from 'router';
 
 const AppRouter: FC = () => {
   const location = useLocation();
 
   return (
     <TransitionGroup>
-      <CSSTransition key={location.key} timeout={250} classNames="fade">
+      <CSSTransition
+        key={location.key}
+        timeout={250}
+        classNames='fade'
+      >
         <Switch location={location}>
           {routes.map((route) => (
             <Route
